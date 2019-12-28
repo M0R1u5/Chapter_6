@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Вы действительно хотите изменить</h2>
+    <form action="" method="post">
+    {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Изменить</button>
+    </form>
+{% endblock %}

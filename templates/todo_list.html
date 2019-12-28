@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for list in object_list %}
+        <ul>
+            <li>{{ list }}
+                <p><a href="{% url 'delete' list.pk %}">Удалить</a></p>
+                <p><a href="{% url 'update' list.pk %}">Изменить</a></p>
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock %}
